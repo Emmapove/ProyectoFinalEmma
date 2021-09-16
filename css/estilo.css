@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: rgba(76, 76, 77, 0.2);
+  background: rgba(249, 249, 250, 0.2);
 }
 
 .background {
@@ -32,7 +32,7 @@ h1 span {
 footer {
   margin: 0;
   padding: 0;
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(134, 133, 133, 0.2);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -59,9 +59,27 @@ footer h2 {
   font-size: 35px;
 }
 
-.section {
+footer h3 {
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-left: 20px;
+}
+
+@media only screen and (max-width: 767px) {
+  footer h2 {
+    display: none;
+  }
+  footer ul {
+    display: none;
+  }
+  h3 {
+    margin-top: 10px;
+    margin-left: 20px;
+  }
+}
+
+.section {
+  margin-top: 50px;
+  margin-bottom: 50px;
   -webkit-box-shadow: 5px 10px 10px;
           box-shadow: 5px 10px 10px;
 }
@@ -71,14 +89,14 @@ footer h2 {
   color: #635526;
   font-size: 40px;
   text-align: center;
-  background-color: rgba(184, 217, 176, 0.3);
+  background-color: rgba(236, 246, 234, 0.3);
 }
 
 .section h3 {
   color: #7a682a;
   font-size: 30px;
   text-align: center;
-  background-color: rgba(184, 217, 176, 0.3);
+  background-color: rgba(237, 245, 235, 0.3);
 }
 
 .container-fluid {
@@ -359,6 +377,10 @@ footer h2 {
   padding: 20px 30px;
   border-top: 4px solid black;
   color: #070606;
+}
+
+.form-contacto p {
+  padding-top: 10px;
 }
 
 .boton-contacto {

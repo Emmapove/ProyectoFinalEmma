@@ -1,8 +1,7 @@
 footer {
     margin: 0;
     padding: 0;
-    background: rgba(0, 0, 0, 0.2);
-    ;
+    background: rgba(134, 133, 133, 0.2);
     justify-content: center;
 
     li {
@@ -25,6 +24,16 @@ footer {
         color: #06050a;
         font-size: 35px;
     }
+    h3{margin-top: 10px;
+    margin-left: 20px;}
 
-
+}
+@media only screen and (max-width: 767px){
+    footer{
+        h2{ display: none;}
+        ul{display: none;}
+    }
+    h3{margin-top: 10px;
+        margin-left: 20px;}
+    
 }
