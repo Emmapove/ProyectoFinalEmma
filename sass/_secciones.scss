@@ -145,12 +145,14 @@ $violet:#6b16cc;
     }
 
     .producto-img {
+        transition: all 1.2s cubic-bezier(0,1,1,0) ;
         width: 50%;
+        cursor: pointer;
     }
 
-    .producto-img:hover {
-        transform: scale(1.2);
-    }
+    // .producto-img:hover {
+    //     transform: scale(1.1);
+    // }
 
     .container-productos {
         display: grid;
@@ -286,8 +288,6 @@ $violet:#6b16cc;
 // NOSOTROS
 
 .text-nosotros {
-    margin-top: 0px;
-    margin-bottom: 0px;
     color: white;
     background: linear-gradient(#0b298a, #695c7d, #0b298a);
 
@@ -298,10 +298,8 @@ $violet:#6b16cc;
 
 .text_nosotros {
     overflow: hidden;
-    margin-top: 0px;
-    margin-bottom: 0px;
     color: white;
-    background: linear-gradient(#000, #695c7d, #0b298a);
+    background: linear-gradient(#0b298a, #695c7d, #0b298a);
 
     img {
         width: 100%;

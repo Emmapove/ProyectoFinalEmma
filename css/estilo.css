@@ -203,11 +203,10 @@ footer h3 {
     width: 80%;
   }
   .producto-img {
+    -webkit-transition: all 1.2s cubic-bezier(0, 1, 1, 0);
+    transition: all 1.2s cubic-bezier(0, 1, 1, 0);
     width: 50%;
-  }
-  .producto-img:hover {
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    cursor: pointer;
   }
   .container-productos {
     display: -ms-grid;
@@ -343,8 +342,6 @@ footer h3 {
 }
 
 .text-nosotros {
-  margin-top: 0px;
-  margin-bottom: 0px;
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(#0b298a), color-stop(#695c7d), to(#0b298a));
   background: linear-gradient(#0b298a, #695c7d, #0b298a);
@@ -356,11 +353,9 @@ footer h3 {
 
 .text_nosotros {
   overflow: hidden;
-  margin-top: 0px;
-  margin-bottom: 0px;
   color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#000), color-stop(#695c7d), to(#0b298a));
-  background: linear-gradient(#000, #695c7d, #0b298a);
+  background: -webkit-gradient(linear, left top, left bottom, from(#0b298a), color-stop(#695c7d), to(#0b298a));
+  background: linear-gradient(#0b298a, #695c7d, #0b298a);
 }
 
 .text_nosotros img {
