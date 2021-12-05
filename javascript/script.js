@@ -14,8 +14,6 @@ console.log (`${nuevoUsuario.nombre} has creado el usuario ${nuevoUsuario.usuari
 ${nuevoUsuario.clave} correctamente`)
 
 
-
-
 function costos() {
     if (producto1 == "1" && producto2 == "2") {
         return juegoPc + juegoXbox;
