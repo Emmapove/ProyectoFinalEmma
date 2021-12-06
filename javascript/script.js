@@ -35,7 +35,7 @@ function costos() {
         return juegoXbox + juegoXbox;}
     }
 
-function total() {
+function totalF() {
     if (producto1 == "1" && producto2 == "2") {
         alert("elegiste juegoPc y juegoXbox");
     } else if (producto1 == "1" && producto2 == "3") {
@@ -62,7 +62,7 @@ let juegoPlay = 3000;
 let producto1 = prompt("Productos \n 1: juegoPc \n 2: juegoXbox \n 3: juegoPlay");
 let producto2 = prompt("Selecciona otro producto \n 1: juegoPc \n 2: juegoXbox \n 3: juegoPlay");
 
-total();
+totalF();
 alert("Tu compra final mas el iva es de $" + costos() * 1.21);
 
 
