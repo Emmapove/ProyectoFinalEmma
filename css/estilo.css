@@ -134,8 +134,13 @@ footer h3 {
   padding: 10px;
 }
 
-.card {
+.cardProducto {
+  background-color: #f1eeee;
   margin: 20px 0px;
+}
+
+.card-text {
+  font-weight: bold;
 }
 
 .form-login {

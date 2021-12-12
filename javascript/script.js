@@ -1,48 +1,20 @@
-// class Usuario {
-//     constructor(nombre, usuario, clave) {
-//         this.nombre = nombre;
-//         this.usuario = usuario;
-//         this.clave = clave;
-//     }
-// }
-// const nombre = prompt("Ingrese su nombre");
-// const usuario = prompt("Ingrese su usuario");
-// const clave = prompt("Ingrese su clave");
-// const nuevoUsuario = new Usuario(nombre, usuario, clave);
-// alert(`Gracias ${nuevoUsuario.nombre} has creado el usuario xxxx y la clave xxxx correctamente. Apreta f12 para ver los datos creados`);
-// console.log (`${nuevoUsuario.nombre} has creado el usuario ${nuevoUsuario.usuario} y la contraseña  
-// ${nuevoUsuario.clave} correctamente`)
+class Usuario {
+    constructor(nombre, usuario, clave) {
+        this.nombre = nombre;
+        this.usuario = usuario;
+        this.clave = clave;
+    }
+}
+const nombre = prompt("Ingrese su nombre");
+const usuario = prompt("Ingrese su usuario");
+const clave = prompt("Ingrese su clave");
+const nuevoUsuario = new Usuario(nombre, usuario, clave);
+alert(`Gracias ${nuevoUsuario.nombre} has creado el usuario xxxx y la clave xxxx correctamente. Apreta f12 para ver los datos creados`);
+console.log (`${nuevoUsuario.nombre} has creado el usuario ${nuevoUsuario.usuario} y la contraseña  
+${nuevoUsuario.clave} correctamente`)
 
 
-// class articulos{
-//     constructor(producto,precio,cantidad){
-//         this.producto = producto;
-//         this.precio = precio;
-//         this.cantidad = cantidad;
 
-//     }
-// }
-
-// const productos = [];
-// let products = prompt("¿Desea cargar un producto? (si/no)")
-// while(products === "si"){
-//     let producto = prompt("Seleccione un producto \ juegoPc, \ juegoXbox, \ juegoPlay");
-//     let precio = prompt("Seleccione el precio del producto 2500 \ 3000 \ 2700");
-//     let cantidad = prompt("Seleccione cuantos productos desea adquirir")
-//     let nuevoProducto = new articulos (producto , precio, cantidad);
-//     productos.push(nuevoProducto);
-//     products= prompt("¿Desea cargar un producto? (si/no)");
-//     console.log(productos)
-//     }
-//     if(products === "no"){
-//         alert("Gracias vuelva pronto")
-//     }
-// let total = 0;
-
-// for( i = 0; i < productos.length; i++){
-//     total = total + productos[i].precio * productos[i].cantidad;
-// }
-// alert("Su monto total es de $ " + total)
 
 // Incio de productos
 
@@ -149,7 +121,7 @@ const carrito = document.getElementById("carrito")
 
 arrayProducts.forEach((elemento) => {
     let card = document.createElement("div")
-    card.classList.add("card","col-sm-12", "col-lg-3")
+    card.classList.add("card", "cardProducto","col-sm-12", "col-lg-3")
     card.innerHTML = `<img src="${elemento.imagen}" class="card-img-top" alt="...">
     <div class="card-body">
       <h5 class="card-title">${elemento.nombre}</h5>
