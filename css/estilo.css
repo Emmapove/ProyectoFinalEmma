@@ -129,9 +129,64 @@ footer h3 {
   }
 }
 
+.cards {
+  padding: 10px 20px;
+}
+
+.car-img {
+  width: 60px;
+  height: 60px;
+  margin: 10px;
+}
+
+.cart {
+  width: 80%;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: #9ef6f6;
+}
+
+.producto-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.total-carrito {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.btn {
+  color: blanchedalmond;
+}
+
+.btn-danger {
+  background-color: black;
+}
+
 .tarjetas {
   margin: 10px;
   padding: 10px;
+}
+
+.finalizar {
+  width: 20%;
 }
 
 .cardProducto {
@@ -141,6 +196,11 @@ footer h3 {
 
 .card-text {
   font-weight: bold;
+}
+
+.total-compra {
+  font-size: 25px;
+  text-align: center;
 }
 
 .form-login {
