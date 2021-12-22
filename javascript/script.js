@@ -114,6 +114,7 @@ arrayProductos.forEach((producto, indice) => {
       `;
   card.innerHTML = html;
   contenedor.appendChild(card);
+
 });
 
 const cart = [];
@@ -131,6 +132,8 @@ const agregarCarrito = (indiceArray) => {
     cart[indiceCarrito].cantidad += 1;
     compraCarrito();
   }
+  
+
 };
 
 let finCarrito = document.getElementById("cart");
@@ -166,8 +169,8 @@ const compraCarrito = () => {
   } else {
     finCarrito.classList.remove("cart");
   }
+  
 };
-
 const eliminarProducto = (indice) => {
   cart.splice(indice, 1);
   compraCarrito();
@@ -178,7 +181,20 @@ const finalizarCompra = () => {
   const compraFinalizada = `<div><p class="total-compra"> Gracias por comprar, su ${total} </p></div>
  `
  finCarrito.innerHTML = compraFinalizada;
+ carritoLocalStorage ();
 };
 
+
+window.onload = function(){
+  const storage = JSON.parse(localStorage.getItem("producto"));
+  if(storage){
+    producto = storage;
+  
+  }
+}
+function carritoLocalStorage () {
+  localStorage.setItem('producto', JSON.stringify(cart));
+  console.log("productos guardados en el localstorage")
+}
 
 
