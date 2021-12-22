@@ -185,16 +185,9 @@ const finalizarCompra = () => {
 };
 
 
-window.onload = function(){
-  const storage = JSON.parse(localStorage.getItem("producto"));
-  if(storage){
-    producto = storage;
-  
-  }
-}
 function carritoLocalStorage () {
   localStorage.setItem('producto', JSON.stringify(cart));
   console.log("productos guardados en el localstorage")
-}
+};
 
 
