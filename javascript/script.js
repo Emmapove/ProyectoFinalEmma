@@ -1,106 +1,16 @@
 
-let arrayProductos = [
-    {
-        id: 1,
-        nombre: "COD",
-        precio: 3500,
-        imagen: "../assets/img/xbox1.png"
-    },
-    {
-        id: 2,
-        nombre: "WATCH DOGS",
-        precio: 3100,
-        imagen: "../assets/img/xbox2.jpg"
-    },
-    {
-        id: 3,
-        nombre: "HALO 4",
-        precio: 3000,
-        imagen: "../assets/img/xbox3.jpg"
-    },
-    {
-        id: 4,
-        nombre: "RALLY",
-        precio: 3000,
-        imagen: "../assets/img/xbox4.jpg"
-    },
-    {
-        id: 5,
-        nombre: "COD",
-        precio: 2500,
-        imagen: "../assets/img/xbox1.png"
-    },
-    {
-        id: 6,
-        nombre: "WATCH DOGS",
-        precio: 1500,
-        imagen: "../assets/img/xbox2.jpg"
-    },
-    {
-        id: 7,
-        nombre: "HALO 4",
-        precio: 4500,
-        imagen: "../assets/img/xbox3.jpg"
-    },
-    {
-        id: 8,
-        nombre: "RALLY",
-        precio: 4000,
-        imagen: "../assets/img/xbox4.jpg"
-    },
-    {
-        id: 9,
-        nombre: "COD",
-        precio: 2000,
-        imagen: "../assets/img/xbox1.png"
-    },
-    {
-        id: 10,
-        nombre: "WATCH DOGS",
-        precio: 3000,
-        imagen: "../assets/img/xbox2.jpg"
-    },
-    {
-        id: 11,
-        nombre: "HALO 4",
-        precio: 2500,
-        imagen: "../assets/img/xbox3.jpg"
-    },
-    {
-        id: 12,
-        nombre: "RALLY",
-        precio: 4500,
-        imagen: "../assets/img/xbox4.jpg"
-    },
-    {
-        id: 9,
-        nombre: "COD",
-        precio: 2000,
-        imagen: "../assets/img/xbox1.png"
-    },
-    {
-        id: 10,
-        nombre: "WATCH DOGS",
-        precio: 3000,
-        imagen: "../assets/img/xbox2.jpg"
-    },
-    {
-        id: 11,
-        nombre: "HALO 4",
-        precio: 2500,
-        imagen: "../assets/img/xbox3.jpg"
-    },
-    {
-        id: 12,
-        nombre: "RALLY",
-        precio: 4500,
-        imagen: "../assets/img/xbox4.jpg"
-    },
-
-];
+let arrayProductos = [];
+$.ajax({
+  url: "../data/data.json",
+  dataType: "json",
+  success: (respuesta) =>{
+    cargarProductos(respuesta);
+  },
+});
+const cargarProductos = (respuesta) =>{
+  arrayProductos = respuesta;
 const contenedor = document.getElementById("contenedor");
 contenedor.innerHTML = "";
-
 arrayProductos.forEach((producto, indice) => {
   let card = document.createElement("div");
   card.classList.add("card", "cards", "col-sm-12", "col-lg-3");
@@ -115,7 +25,8 @@ arrayProductos.forEach((producto, indice) => {
   card.innerHTML = html;
   contenedor.appendChild(card);
 
-});
+})
+};
 
 const cart = [];
 
@@ -190,4 +101,57 @@ function carritoLocalStorage () {
   console.log("productos guardados en el localstorage")
 };
 
+
+// formulario de contacto
+// let valEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
+// $('form-contacto').validate({
+//   rules: {
+//     nombre:{
+//       required: true,
+//       minlength:3,
+//       maxlength: 30,
+//     },
+//     apellido:{
+//       required: true,
+//       minlength:3,
+//       maxlength: 30,
+//     },
+//     email:{
+//       required: true,
+//       email:true,
+
+//     },
+//     mensaje:{
+//       required:true,
+//       minlength: 5,
+//       maxlength: 200,
+//     },
+//   }
+// })
+$('#boton-form').click(function(){
+  let formNombre = $('#nombre-form').val();
+  let apellido = $('#apellido-form').val();
+  let email = $('#email-form').val();
+  let mensaje = $('#mensaje-form')
+  console.log(formNombre)
+  if(formNombre == ""){
+    
+    $('#mensaje1').fadeIn();
+    return false;
+  } else {
+    $('#mensaje1').fadeOut();
+    if(apellido = ""){
+      $('#mensaje2').fadeIn();
+      return false;
+    }else{
+      $('#mensaje2').fadeOut();
+      if(email == "" || !valEmail.test(email)){
+        $('#mensaje3').fadeIn();
+        return false;
+      } else{
+        $('#mensaje3').fadeOut();
+      }
+    }
+   }
+});
 

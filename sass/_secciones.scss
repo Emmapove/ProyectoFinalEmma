@@ -213,7 +213,10 @@ $violet:#6b16cc;
 
 
 // Contacto
-
+.errores {
+    background: red;
+    display: none;
+};
 .form-contacto {
     width: 500px;
     height: 750px;

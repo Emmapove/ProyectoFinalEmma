@@ -271,6 +271,11 @@ footer h3 {
   width: 100%;
 }
 
+.errores {
+  background: red;
+  display: none;
+}
+
 .form-contacto {
   width: 500px;
   height: 750px;

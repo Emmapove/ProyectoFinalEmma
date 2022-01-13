@@ -1,0 +1,99 @@
+[
+{
+    "id": 1,
+    "nombre": "COD",
+    "precio": 3500,
+    "imagen": "../assets/img/xbox1.png"
+},
+{
+    "id": 2,
+   "nombre": "WATCH DOGS",
+   "precio": 3100,
+    "imagen": "../assets/img/xbox2.jpg"
+},
+{
+    "id": 3,
+    "nombre": "HALO 4",
+    "precio": 3000,
+    "imagen": "../assets/img/xbox3.jpg"
+},
+{
+    "id": 4,
+    "nombre": "RALLY",
+    "precio": 3000,
+    "imagen": "../assets/img/xbox4.jpg"
+},
+{
+    "id": 5,
+    "nombre": "COD",
+   " precio": 2500,
+    "imagen": "../assets/img/xbox1.png"
+},
+{
+    "id":6,
+    "nombre": "WATCH DOGS",
+   "precio": 1500,
+    "imagen": "../assets/img/xbox2.jpg"
+},
+{
+    "id": 7,
+    "nombre": "HALO 4",
+    "precio": 4500,
+    "imagen": "../assets/img/xbox3.jpg"
+},
+{
+    "id":8,
+    "nombre": "RALLY",
+    "precio": 4000,
+    "imagen": "../assets/img/xbox4.jpg"
+},
+{
+    "id": 9,
+    "nombre": "COD",
+   "precio": 2000,
+   "imagen": "../assets/img/xbox1.png"
+},
+{
+   " id": 10,
+    "nombre": "WATCH DOGS",
+    "precio": 3000,
+    "imagen": "../assets/img/xbox2.jpg"
+},
+{
+    "id": 11,
+    "nombre": "HALO 4",
+    "precio": 2500,
+    "imagen": "../assets/img/xbox3.jpg"
+},
+{
+    "id": 12,
+    "nombre": "RALLY",
+    "precio": 4500,
+    "imagen": "../assets/img/xbox4.jpg"
+},
+{
+    "id": 9,
+    "nombre": "COD",
+    "precio": 2000,
+    "imagen": "../assets/img/xbox1.png"
+},
+{
+    "id": 10,
+    "nombre": "WATCH DOGS",
+    "precio": 3000,
+    "imagen": "../assets/img/xbox2.jpg"
+},
+{
+    "id": 11,
+    "nombre": "HALO 4",
+    "precio": 2500,
+    "imagen": "../assets/img/xbox3.jpg"
+},
+{
+    "id": 12,
+    "nombre": "RALLY",
+    "precio": 4500,
+    "imagen": "../assets/img/xbox4.jpg"
+}
+]
+   
