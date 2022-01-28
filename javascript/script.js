@@ -1,7 +1,7 @@
 
 let arrayProductos = [];
 $.ajax({
-  url: "json/data.json",
+  url: "/json/data.json",
   dataType: "json",
   success: (respuesta) =>{
     cargarProductos(respuesta);
@@ -88,12 +88,12 @@ const finalizarCompra = () => {
   const compraFinalizada = `<div class="compra-finalizada"><p class="compra-parrafo"> YA CASI ES TUYA LA COMPRA, EL   ${total} </p></div>
   <div class="datos-cliente">
   <p class="datos-parrafo"> Complete el formulario con sus datos para coordinar la entrega</p>
-  <button class= "btn btn-danger formulario" id="formulario" onClick="dibujarFormu()"> FORMULARIO </button>
+  <button class= "btn btn-danger formulario" id="formulario" onClick="formEnvio()"> FORMULARIO </button>
   </div>`;
  finCarrito.innerHTML = compraFinalizada;
  carritoLocalStorage ();
 };
-const dibujarFormu = () => {
+const formEnvio = () => {
   finCarrito.innerHTML = "";
   const formulario = `
   <h2> DATOS PARA EL ENVÍO </h2>
@@ -126,7 +126,6 @@ const dibujarFormu = () => {
 const mostrarMensaje = () => {
   const nombreCliente = document.getElementById("nombre").value;
   const domicilioCliente = document.getElementById("domicilio").value;
-  debugger;
   finCarrito.innerHTML = "";
   let mensaje = `<div class="mensaje-final">Gracias ${nombreCliente} por su compra! en 48 horas recibira su paquete en ${domicilioCliente} </div>`;
   finCarrito.innerHTML = mensaje;
