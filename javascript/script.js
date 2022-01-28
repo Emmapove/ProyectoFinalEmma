@@ -24,12 +24,8 @@ arrayProductos.forEach((producto, indice) => {
       `;
   card.innerHTML = html;
   contenedor.appendChild(card);
-
-})
-};
-
+})};
 const cart = [];
-
 const agregarCarrito = (indiceArray) => {
   const indiceCarrito = cart.findIndex((elemento) => {
     return elemento.id === arrayProductos[indiceArray].id;
@@ -89,53 +85,67 @@ const eliminarProducto = (indice) => {
 const finalizarCompra = () => {
   const total = document.getElementsByClassName("total")[0].innerHTML;
   finCarrito.innerHTML = "";
-  const compraFinalizada = `<div><p class="total-compra"> Gracias por comprar, su ${total} </p></div>
- `
+  const compraFinalizada = `<div class="compra-finalizada"><p class="compra-parrafo"> YA CASI ES TUYA LA COMPRA, EL   ${total} </p></div>
+  <div class="datos-cliente">
+  <p class="datos-parrafo"> Complete el formulario con sus datos para coordinar la entrega</p>
+  <button class= "btn btn-danger formulario" id="formulario" onClick="dibujarFormu()"> FORMULARIO </button>
+  </div>`;
  finCarrito.innerHTML = compraFinalizada;
  carritoLocalStorage ();
 };
+const dibujarFormu = () => {
+  finCarrito.innerHTML = "";
+  const formulario = `
+  <h2> DATOS PARA EL ENVÍO </h2>
+  <div class="contact__secction-container">
+   <div class="row">
+     <div class="formContacto">
+       <label>Nombre</label>
+       <input type="text" id="nombre" placeholder="Nombre"  />
+     </div>
+     <div class="formContacto">
+       <label>E-mail</label>
+       <input type="text" id="mail" placeholder="E-mail" />
+     </div>
+     <div class="formContacto">
+       <label>Telefono</label>
+       <input type="text" id="telefono" placeholder="Telefono"  />
+     </div>
+     <div class="formContacto">
+       <label>Domicilio</label>
+       <input type="text" id="domicilio" placeholder="Domicilio" />
+     </div>
+     <div class="contact-button">
+       <button type="button" class="btn btn-danger envio" onClick="mostrarMensaje()" >Confirmar</button>
+     </div>
+   </div>
+ </div>`;
+ finCarrito.innerHTML = formulario;
+};
 
-
-function carritoLocalStorage () {
-  localStorage.setItem('producto', JSON.stringify(cart));
-  console.log("productos guardados en el localstorage")
+const mostrarMensaje = () => {
+  const nombreCliente = document.getElementById("nombre").value;
+  const domicilioCliente = document.getElementById("domicilio").value;
+  debugger;
+  finCarrito.innerHTML = "";
+  let mensaje = `<div class="mensaje-final">Gracias ${nombreCliente} por su compra! en 48 horas recibira su paquete en ${domicilioCliente} </div>`;
+  finCarrito.innerHTML = mensaje;
 };
 
 
-// formulario de contacto
-// let valEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3,4})+$/;
-// $('form-contacto').validate({
-//   rules: {
-//     nombre:{
-//       required: true,
-//       minlength:3,
-//       maxlength: 30,
-//     },
-//     apellido:{
-//       required: true,
-//       minlength:3,
-//       maxlength: 30,
-//     },
-//     email:{
-//       required: true,
-//       email:true,
 
-//     },
-//     mensaje:{
-//       required:true,
-//       minlength: 5,
-//       maxlength: 200,
-//     },
-//   }
-// })
+function carritoLocalStorage () {
+  localStorage.setItem('cart', JSON.stringify(cart));
+  console.log("productos guardados en el localstorage")
+};
+
+ const valEmail =  /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
+// formulario
 $('#boton-form').click(function(){
   let formNombre = $('#nombre-form').val();
   let apellido = $('#apellido-form').val();
   let email = $('#email-form').val();
-  let mensaje = $('#mensaje-form')
-  console.log(formNombre)
   if(formNombre == ""){
-    
     $('#mensaje1').fadeIn();
     return false;
   } else {

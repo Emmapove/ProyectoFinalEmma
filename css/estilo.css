@@ -1,6 +1,6 @@
 body {
   font-family: 'Roboto', sans-serif;
-  background: rgba(249, 249, 250, 0.2);
+  background: rgba(250, 248, 248, 0.5);
 }
 
 .background {
@@ -9,8 +9,8 @@ body {
 
 li {
   border-right: 1px solid grey;
-  padding: 0px 20px;
-  margin: 0px 10px;
+  padding: 0px 70px;
+  margin: 0px 30px;
 }
 
 a {
@@ -29,6 +29,22 @@ h1 span {
   max-height: 70vh;
 }
 
+.icon-instagram {
+  color: rgba(235, 89, 32, 0.966);
+}
+
+.icon-facebook {
+  color: rgba(64, 53, 228, 0.8);
+}
+
+.icon-twitter {
+  color: rgba(9, 23, 155, 0.9);
+}
+
+.icon-linkedin {
+  color: rgba(14, 3, 180, 0.9);
+}
+
 footer {
   margin: 0;
   padding: 0;
@@ -39,6 +55,7 @@ footer {
 }
 
 footer li {
+  display: inline;
   list-style: none;
 }
 
@@ -54,6 +71,7 @@ footer a:hover {
 }
 
 footer h2 {
+  text-align: center;
   padding: 5px 40px;
   color: #06050a;
   font-size: 35px;
@@ -139,12 +157,63 @@ footer h3 {
   margin: 10px;
 }
 
+.mensaje-final {
+  text-align: center;
+}
+
 .cart {
   width: 80%;
   margin: auto;
   margin-bottom: 20px;
   padding: 20px;
-  background: #9ef6f6;
+  background: #e7ecec;
+}
+
+.compra-finalizada {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.datos-parrafo {
+  text-align: center;
+}
+
+.formContacto {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 15px;
+}
+
+.contact-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-size: 0.5rem;
+}
+
+.envio {
+  margin-top: 15px;
+}
+
+.datos-cliente {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-top: 10px;
 }
 
 .producto-carrito {
@@ -203,53 +272,6 @@ footer h3 {
   text-align: center;
 }
 
-.form-login {
-  width: 400px;
-  height: 350px;
-  background: rgba(0, 0, 0, 0.2);
-  margin: auto;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  -webkit-box-shadow: 7px 13px 37px #000;
-          box-shadow: 7px 13px 37px #000;
-  padding: 20px 30px;
-  border-top: 4px solid black;
-  color: black;
-}
-
-.form-login h5 {
-  margin: 0;
-  text-align: center;
-  height: 40px;
-  margin-bottom: 30px;
-  border-bottom: 1px solid;
-  font-size: 20px;
-}
-
-.form {
-  width: 100%;
-  border: 1px solid black;
-  margin-bottom: 15px;
-  padding: 5px 10px;
-  background: #414040;
-  font-weight: bold;
-  color: white;
-}
-
-.boton {
-  width: 100%;
-  height: 30px;
-  background: white;
-  color: black;
-  margin-bottom: 15px;
-}
-
-.text-boton {
-  height: 50px;
-  text-align: center;
-  border-bottom: 1px solid;
-}
-
 .text-nosotros {
   color: white;
   background: -webkit-gradient(linear, left top, left bottom, from(#0b298a), color-stop(#695c7d), to(#0b298a));
@@ -271,9 +293,22 @@ footer h3 {
   width: 100%;
 }
 
+.form {
+  width: 100%;
+  border: 1px solid black;
+  margin-bottom: 15px;
+  padding: 5px 10px;
+  background: #414040;
+  font-weight: bold;
+  color: white;
+}
+
 .errores {
   background: red;
   display: none;
+  position: absolute;
+  margin-left: 320px;
+  margin-top: -50px;
 }
 
 .form-contacto {

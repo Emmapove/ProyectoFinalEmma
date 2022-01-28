@@ -5,6 +5,7 @@ footer {
     justify-content: center;
 
     li {
+        display: inline;
         list-style: none;
     }
 
@@ -19,7 +20,7 @@ footer {
         background: rgba(0, 0, 0, 0.2);
     }
 
-    h2 {
+    h2 { text-align: center;
         padding: 5px 40px;
         color: #06050a;
         font-size: 35px;
